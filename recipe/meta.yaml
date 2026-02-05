@@ -1,5 +1,5 @@
 {% set name = "instructor" %}
-{% set version = "1.11.3" %}
+{% set version = "1.14.5" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/jxnl/instructor/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ab4c3a44a01836cf842f41be7091577056d691bd99a5ba9075b946c22cd8812e
+  sha256: fcb6432867f2fe4a5986e8bf389dcc64ed2ad4039a12a2dff85464e51c2f171a
 
 build:
   entry_points:
@@ -25,30 +25,36 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - openai >=1.82.0,<2.0.0
-    - pydantic >=2.10.4,<3.0.0
-    - docstring_parser >=0.16.0,<0.17.0
-    - typer >=0.12.3,<1.0.0
-    - rich >=13.7.1,<15.0.0
-    - aiohttp >=3.11.11,<4.0.0
-    - requests >=2.32.3
-    - tenacity ==8.2.3
-    - pydantic-core >=2.27.2,<3.0.0
-    - jiter >=0.6.1,<0.7
-    - jinja2 >=3.1.4
-    - diskcache >=5.6.3,<6.0.0
+    - openai >=2.0.0,<3.0.0
+    - pydantic >=2.8.0,<3.0.0
+    - docstring_parser >=0.16,<1.0
+    - typer >=0.9.0,<1.0.0
+    - rich >=13.7.0,<15.0.0
+    - aiohttp >=3.9.1,<4.0.0
+    - tenacity >=8.2.3,<10.0.0
+    - pydantic-core >=2.18.0,<3.0.0
+    - jiter >=0.6.1,<0.13
+    - jinja2 >=3.1.4,<4.0.0
+    - requests >=2.32.3,<3.0.0
+    - diskcache >=5.6.3
   run_constrained:
-    - fastapi ==0.115.6,<0.116.0
-    - redis-py ==5.0.4,<6.0.0
-    - pandas >=2.2.2,<3.0.0
-    - tabulate >=0.9.0,<0.10.0
-    - pydantic_extra_types >=2.7.0,<3.0.0
-    - litellm >=1.37.19,<2.0.0
-    - anthropic >=0.53.0,<0.54.0
-    - xmltodict >=0.13.0,<0.15.0
-    - groq >=0.5.0,<0.6.0
-    - cohere >=5.3.4,<6.0.0
-    - mistralai >=0.2.0,<0.3.0
+    - anthropic ==0.76.0
+    - xmltodict >=0.13,<1.1
+    - groq >=0.4.2,<1.1.0
+    - cohere >=5.1.8,<6.0.0
+    - jsonref >=1.1.0,<2.0.0
+    - writer-sdk >=2.2.0,<3.0.0
+    - boto3 >=1.34.0,<2.0.0
+    - mistralai >=1.5.1,<2.0.0
+    - openai >=2.0.0,<3.0.0
+    - google-genai >=1.5.0
+    - litellm >=1.35.31,<2.0.0
+    - xai-sdk >=0.2.0
+    - python-dotenv >=1.0.0
+    - sqlmodel >=0.0.22,<1.0.0
+    - trafilatura >=1.12.2,<3.0.0
+    - pydub >=0.25.1,<1.0.0
+    - datasets >=3.0.1,<5.0.0
 
 test:
   imports:
@@ -68,3 +74,4 @@ about:
 extra:
   recipe-maintainers:
     - moritzwilksch
+    - philippjfr
