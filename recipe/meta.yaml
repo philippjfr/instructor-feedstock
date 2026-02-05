@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/jxnl/instructor/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: fcb6432867f2fe4a5986e8bf389dcc64ed2ad4039a12a2dff85464e51c2f171a
+  sha256: 9a9e8168f574bc589f455b992a59d50a06884d96be016e09e972b56387f8607a
 
 build:
   entry_points:
